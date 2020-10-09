@@ -1,2 +1,40 @@
-# Team-Profile-Generator
- A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
+
+
+  # Title:
+  Team Profile Generator
+
+  ## Description:
+  description of project
+
+  ## Table of Contents:
+   * [GitHub Repo](#github)
+   
+   * [E-mail](#email)
+   
+   * [Licenses](#licences)
+   
+   * [Usage](#usage)
+
+   * [Credits](#credits)
+   
+   * [Project Media](#media)
+
+
+  ## Contact Information:
+  DCampos07 
+  dccampos00@gmail.com
+
+  ## Installation:
+    Node.js
+
+  ## Usage:
+    
+  
+  ## Credits:
+  
+
+  ### License:
+  
+
+  ## Project Media:
+  
