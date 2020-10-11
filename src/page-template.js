@@ -32,7 +32,7 @@ const generateTeam = team => {
                 </div>   
             </div>     
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Employee ID: $engineer.getId()}</li>
+                <li class="list-group-item">Employee ID: ${engineer.getId()}</li>
                 <li class="list-group-item">Employee Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
                 <li class="list-group-item">Employee GitHub: <a href="https://github.com/${engineer.getGithub()}" target-"_blank">${engineer.getGithub()}</a></li>
             </ul>
@@ -50,7 +50,7 @@ const generateTeam = team => {
                 </div>   
             </div>     
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Employee ID: $engineer.getId()}</li>
+                <li class="list-group-item">Employee ID: ${intern.getId()}</li>
                 <li class="list-group-item">Employee Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-group-item">Employee School: ${intern.getSchool()}</li>
             </ul>
@@ -69,7 +69,7 @@ const generateTeam = team => {
     );
     html.push(team
         .filter(employee => employee.getTitle() === "Intern")
-        .map(engineer => generateIntern(intern))
+        .map(intern => generateIntern(intern))
         .join("")
     );
     console.log(html)
@@ -77,7 +77,7 @@ const generateTeam = team => {
 }
 
 //HTML page funtion
-module.export = team => {
+module.exports = team => {
     return `
     <!DOCTYPE html>
         <html lang="en">
@@ -86,7 +86,7 @@ module.export = team => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Team Builder</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="./dist/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="jumbotron jumbotron-fluid">

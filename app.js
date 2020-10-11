@@ -1,12 +1,17 @@
 const fs = require('fs');
-const render = require('./scr/page-template');
 const inquirer = require('inquirer');
+const path = require("path");
 //const jest = require('jest');
 
 //Class Files
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const OUTPUT_DIR = path.resolve(__dirname, "output")
+const outputPath = path.join(OUTPUT_DIR, "team.html");
+const render = require('./src/page-template.js');
+const teamMembers = [];
+const idArray = [];
 
 //const { functionTypeAnnotation } = require('@babel/types');
 
@@ -51,10 +56,10 @@ function appMenu () {
             type: "list",
             name: "memberChoice",
             message: "Would you like to add any additional team members?",
-            choices: ["Engineer", "Inter", "No further members to add"]
+            choices: ["Engineer", "Intern", "No further members to add"]
         }
         ]).then(userchoice => {
-            switch (userchoice=memberChoice) {
+            switch (userchoice.memberChoice) {
                 case "Engineer":
                     addEngineer();
                     break;
@@ -130,10 +135,10 @@ function appMenu () {
     }
 
     function buildTeam() {
-        if (!fs.existsSync(DIST_DIR)) {
-            fs.mkdirSync(DIST_DIR)
-        }
-        fs.writeFileSync(outputPath, render(teamMembers), "Checkout your team!");
+        if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR)
+          }
+          fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
     addManager();
 }
