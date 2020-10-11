@@ -1,19 +1,22 @@
 const fs = require('fs');
-const createTeam = require("./scr/page.template").default;
+const render = require('./scr/page-template');
 const inquirer = require('inquirer');
-const jest = require('jest');
+//const jest = require('jest');
 
 //Class Files
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
-const Manager = require("./lib/Manager");
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
+
 //const { functionTypeAnnotation } = require('@babel/types');
 
 
 function appMenu () {
-    function createManager() {
+    
+    const addManager = () => {
         console.log("Let's create your super team");
-        inquirer.prompt([
+        return inquirer.prompt([
+    
             {
                 type: "input",
                 name: "managerName",
@@ -27,22 +30,22 @@ function appMenu () {
             {
                 type: "input",
                 name: "managerEmail",
-                message: "What is email address?"
+                message: "What is the manager's email address?"
             },
             {
                 type: "input",
-                name: "managerofficeNumber",
-                message: "What is your office number?"
+                name: "managerOfficeNumber",
+                message: "What is the manager's office number?"
             },
         ]).then(answers => {
-        const Manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
         teamMembers.push(manager);
         idArray.push(answers.managerId);
-        createTeam();
+        generateTeam();
         });
     }
   
-    funtion createTeam() {
+    const generateTeam = () =>{
         
         inquirer.prompt ([{
             type: "list",
@@ -64,8 +67,8 @@ function appMenu () {
         });
     }
 
-    funtion addEngineer() {
-        inquirer.prompt([
+    const addEngineer = () => {
+        return inquirer.prompt([
             {
                 type: "input",
                 name: "engineerName",
@@ -91,12 +94,12 @@ function appMenu () {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
-            createTeam();
+            generateTeam();
             });
     }
 
-    funtion addIntern() {
-        inquirer.prompt([
+    const addIntern = () => {
+        return inquirer.prompt([
             {
                 type: "input",
                 name: "internName",
@@ -122,7 +125,7 @@ function appMenu () {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             idArray.push(answers.internId);
-            createTeam();
+            generateTeam();
             });
     }
 
@@ -130,9 +133,9 @@ function appMenu () {
         if (!fs.existsSync(DIST_DIR)) {
             fs.mkdirSync(DIST_DIR)
         }
-        fs.writeFileSync(outputPath, render(teamMember), "Checkout your team!");
+        fs.writeFileSync(outputPath, render(teamMembers), "Checkout your team!");
     }
-    createManager();
+    addManager();
 }
 
 appMenu();
