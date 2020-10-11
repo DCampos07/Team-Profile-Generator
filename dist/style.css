@@ -30,8 +30,16 @@ li{
 
 .engineer {
     background-color: rgb(46, 174, 179);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     }
 
 .intern {
     background-color: rgb(101, 56, 173);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     }
