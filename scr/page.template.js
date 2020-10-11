@@ -1,5 +1,5 @@
 //Generates team
-const createTeam = team => {
+const generateTeam = team => {
     
     //Generated the Manager on HTML
     const generateManager = manager => {
@@ -14,9 +14,9 @@ const createTeam = team => {
                 </div>   
             </div>     
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${manager.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
+                <li class="list-group-item">Employee ID: ${manager.getId()}</li>
+                <li class="list-group-item">Employee Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                <li class="list-group-item">Employee Office Number: ${manager.getOfficeNumber()}</li>
             </ul>
         </div>
     `};
@@ -32,9 +32,9 @@ const createTeam = team => {
                 </div>   
             </div>     
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: $engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target-"_blank" rel-"nooepener noreferrer">${engineer.getGithub()}</a></li>
+                <li class="list-group-item">Employee ID: $engineer.getId()}</li>
+                <li class="list-group-item">Employee Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                <li class="list-group-item">Employee GitHub: <a href="https://github.com/${engineer.getGithub()}" target-"_blank">${engineer.getGithub()}</a></li>
             </ul>
         </div>
     `};
@@ -50,9 +50,9 @@ const createTeam = team => {
                 </div>   
             </div>     
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: $engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
-                <li class="list-group-item">School: ${intern.getSchool()}</li>
+                <li class="list-group-item">Employee ID: $engineer.getId()}</li>
+                <li class="list-group-item">Employee Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                <li class="list-group-item">Employee School: ${intern.getSchool()}</li>
             </ul>
         </div>
     `};
@@ -68,7 +68,7 @@ const createTeam = team => {
         .join("")
     );
     html.push(team
-        .filter(employee => employee.getTitle() === "Inter")
+        .filter(employee => employee.getTitle() === "Intern")
         .map(engineer => generateIntern(intern))
         .join("")
     );
@@ -77,8 +77,7 @@ const createTeam = team => {
 }
 
 //HTML page funtion
-
-module.exports = team => {
+export default team => {
     return `
     <!DOCTYPE html>
         <html lang="en">
@@ -98,7 +97,7 @@ module.exports = team => {
         <div class="container">
             <div class="row">
                 <div class="team-card col-12 d-flex justify-content-center">
-                ${createTeam(team)}
+                ${generateTeam(team)}
             </div>
         </div>
 
