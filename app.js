@@ -7,7 +7,7 @@ const path = require("path");
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
-const OUTPUT_DIR = path.resolve(__dirname, "output")
+const OUTPUT_DIR = path.resolve(__dirname, "dist")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require('./src/page-template.js');
 const teamMembers = [];
@@ -123,7 +123,7 @@ function appMenu () {
             {
                 type: "input",
                 name: "internSchool",
-                message: "What is the intern's school link?",
+                message: "What is the intern's school?",
             },
 
         ]).then(answers => {
@@ -131,9 +131,9 @@ function appMenu () {
             teamMembers.push(intern);
             idArray.push(answers.internId);
             generateTeam();
-            });
+    });
     }
-
+//Takes above information into the HTML
     function buildTeam() {
         if (!fs.existsSync(OUTPUT_DIR)) {
             fs.mkdirSync(OUTPUT_DIR)

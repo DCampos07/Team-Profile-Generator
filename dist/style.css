@@ -1,0 +1,37 @@
+.jumbotron{
+    background-color: #28a745;
+    color: whitesmoke;
+    text-align: center;
+}
+
+h2{
+    color: white
+}
+
+h3{
+    color: white;
+}
+
+li{
+    color: black;
+}
+.border-success:{
+    border-color: white;
+}
+.manager {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    background-color: rgb(13, 9, 238);
+    }
+
+.engineer {
+    background-color: rgb(46, 174, 179);
+    }
+
+.intern {
+    background-color: rgb(101, 56, 173);
+    }

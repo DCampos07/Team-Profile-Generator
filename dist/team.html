@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
         <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -7,7 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
-    
+
     <body>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -16,40 +17,57 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="team-card col-12 d-flex justify-content-center">
-               
-                    <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header"></div>
-                            <div class="card-body text-success">
-                                <h2 class="card-title"></h2>
-                                    <h3 class="card-text"></h3>
-                            </div>   
-                        </div>     
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID: </li>
-                            <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}"></a></li>
-                            <li class="list-group-item">Office Number: </li>
-                        </ul>
-                    </div>
-
-                    <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header"></div>
-                            <div class="card-body text-success">
-                                <h2 class="card-title">}</h2>
-                                    <h3 class="card-text"></h3>
-                            </div>   
-                        </div>     
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID: </li>
-                            <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}"></a></li>
-                            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target-"_blank" rel-"nooepener noreferrer">${engineer.getGithub()}</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
+                    
+        <div class="card border-success mb-3 manager">
+            <div class ="card-body text-success">
+                <h2 class="card-title">anme</h2>
+                <h3 class="card-text">Manager</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">anme's ID: id</li>
+                    <li class="list-group-item">anme's Email: <a href="mailto:email">email</a></li>
+                    <li class="list-group-item">anme's Office Number: 1</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card border-success mb-3 engineer">
+            <div class ="card-body text-success">
+                <h2 class="card-title">name</h2>
+                <h3 class="card-text">Engineer</h3>       
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">name's ID: id</li>
+                    <li class="list-group-item">name's Email: <a href="mailto:dccampos00@gmail.com">dccampos00@gmail.com</a></li>
+                    <li class="list-group-item">name's GitHub: <a href="https://github.com/DCAmpos07" target-"_blank">DCAmpos07</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card border-success mb-3 engineer">
+            <div class ="card-body text-success">
+                <h2 class="card-title">name</h2>
+                <h3 class="card-text">Engineer</h3>       
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">name's ID: 8</li>
+                    <li class="list-group-item">name's Email: <a href="mailto:dccampos00@gmail.com">dccampos00@gmail.com</a></li>
+                    <li class="list-group-item">name's GitHub: <a href="https://github.com/DCampos07@github.com" target-"_blank">DCampos07@github.com</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card border-success mb-3 intern">
+            <div class ="card-body text-success">
+                <h2 class="card-title">intern</h2>
+                <h3 class="card-text">Intern</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">intern's ID: 4</li>
+                    <li class="list-group-item">intern's Email: <a href="mailto:dccampos00@gmail.com">dccampos00@gmail.com</a></li>
+                    <li class="list-group-item">intern's School: UCF</li>
+                </ul>
+            </div>
+        </div>
 
             </div>
         </div>
 
     </body>
+    
