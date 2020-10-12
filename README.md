@@ -16,7 +16,7 @@ When the user decides to finish building their team, then they exit the applicat
 
 
   ## Table of Contents:
-   * https://dcampos07.github.io/Team-Profile-Generator/(#github)
+   * https://dcampos07.github.io/Team-Profile-Generator
    
    * [E-mail](#email)
    
@@ -37,14 +37,14 @@ When the user decides to finish building their team, then they exit the applicat
     Node.js
 
   ## Usage:
-    npm inquirer
-    npm fs
+    * npm inquirer
+    * npm fs
   
   ## Credits:
   --
 
   ### License:
-   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT),[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC),[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
    
   ## Project Media:
   [![Team-Profile-Genenator-vid.mp4](https://drive.google.com/file/d/1kGM7ImDnmqmiK4OB04Iwg13RxtQuQ_zJ/view)
