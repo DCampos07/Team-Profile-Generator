@@ -47,6 +47,7 @@ When the user decides to finish building their team, then they exit the applicat
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
    
   ## Project Media:
-  [![Team-Profile-Genenator-vid.mp4](https://drive.google.com/file/d/1kGM7ImDnmqmiK4OB04Iwg13RxtQuQ_zJ/view)
-  [!team-profile-generator-screenshot.png](https://github.com/DCampos07/Team-Profile-Generator/blob/main/assets/img/team-profile-generator-screenshot.png}
+ ![team-profile-generator-screenshot.png](https://github.com/DCampos07/Team-Profile-Generator/blob/main/assets/img/team-profile-generator-screenshot.png),
+ ![giphy](https://github.com/DCampos07/Team-Profile-Generator/blob/main/assets/img/giphy.gif)
+ Video Link: https://drive.google.com/file/d/1kGM7ImDnmqmiK4OB04Iwg13RxtQuQ_zJ/view
   
